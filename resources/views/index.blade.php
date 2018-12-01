@@ -1,48 +1,6 @@
-<!doctype html>
-<html lang="{{ app()->getLocale() }}">
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="">
-    <meta name="author" content="">
-    <meta name="csrf-token" content="{{ csrf_token() }}">
-    <link rel="icon" href="../../../../favicon.ico">
+@extends('layouts.main')
 
-    <title>Product example for Bootstrap</title>
-
-    <!-- Bootstrap core CSS -->
-    <link href="{{asset('css/app.css')}}" rel="stylesheet">
-
-    <!-- Custom styles for this template -->
-    <link href="{{asset('css/product.css')}}" rel="stylesheet">
-</head>
-
-<body>
-
-<nav class="site-header sticky-top py-1">
-    <div class="container d-flex flex-column flex-md-row justify-content-between" style="max-width: 1140px">
-        <a class="py-2" href="#">
-            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
-                 stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                 class="d-block mx-auto">
-                <circle cx="12" cy="12" r="10"></circle>
-                <line x1="14.31" y1="8" x2="20.05" y2="17.94"></line>
-                <line x1="9.69" y1="8" x2="21.17" y2="8"></line>
-                <line x1="7.38" y1="12" x2="13.12" y2="2.06"></line>
-                <line x1="9.69" y1="16" x2="3.95" y2="6.06"></line>
-                <line x1="14.31" y1="16" x2="2.83" y2="16"></line>
-                <line x1="16.62" y1="12" x2="10.88" y2="21.94"></line>
-            </svg>
-        </a>
-        <a class="py-2 d-none d-md-inline-block" href="#">主页</a>
-        <a class="py-2 d-none d-md-inline-block" href="#">产品</a>
-        <a class="py-2 d-none d-md-inline-block" href="#">新闻</a>
-        <a class="py-2 d-none d-md-inline-block" href="#">关于</a>
-        <a class="py-2 d-none d-md-inline-block" href="#">联系</a>
-    </div>
-</nav>
-
-<main role="main">
+@section('content')
     <!--轮播图-->
     <div id="myCarousel" class="carousel slide" data-ride="carousel">
         <ol class="carousel-indicators">
@@ -101,10 +59,51 @@
             <div class="row">
                 <div class="col-lg-12">
                     <h3 class="ps-section__title" data-mask="features">- 特 色 产 品</h3>
-                    <div class="ps-section__action float-right"><a class="ps-morelink text-uppercase" href="#">查 看 全 部<i
+                    <div class="ps-section__action float-right"><a class="ps-morelink text-uppercase" href="{{route('productList')}}">查 看 全 部<i
                                     class="fa fa-long-arrow-right"></i></a></div>
                 </div><!-- /.col-lg-12 -->
-                <div class="col-md-3">
+                <div class="col-xl-3 col-lg-4 col-md-6">
+                    <div class="card text-center">
+                        <div class="ps-badge"><span>New</span></div>
+                        <a href="#"><img class="card-img" src="{{asset('images/4.png')}}" alt="Card image cap"></a>
+                        <div class="card-body">
+                            <p class="card-text">产品的介绍</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-3 col-lg-4 col-md-6 col-md-6">
+                    <div class="card mb-3 shadow-sm">
+                        <div class="ps-badge ps-badge--hot"><span>Hot</span></div>
+                        <a href="#"><img class="card-img-top"
+                                         data-src="holder.js/100px300?theme=thumb&bg=55595c&fg=eceeef&text=产品图片 328x300"
+                                         alt="Card image cap"></a>
+                        <div class="card-body">
+                            <p class="card-text">产品的介绍</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-3 col-lg-4 col-md-6">
+                    <div class="card mb-3 shadow-sm">
+                        <a href="#"><img class="card-img-top"
+                                         data-src="holder.js/100px300?theme=thumb&bg=55595c&fg=eceeef&text=产品图片 328x300"
+                                         alt="Card image cap"></a>
+                        <div class="card-body">
+                            <p class="card-text">产品的介绍</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-3 col-lg-4 col-md-6">
+                    <div class="card mb-3 shadow-sm">
+                        <a href="#"><img class="card-img-top"
+                                         data-src="holder.js/100px300?theme=thumb&bg=55595c&fg=eceeef&text=产品图片 328x300"
+                                         alt="Card image cap"></a>
+                        <div class="card-body">
+                            <p class="card-text">产品的介绍</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-xl-3 col-lg-4 col-md-6">
                     <div class="card mb-4 shadow-sm">
                         <div class="ps-badge"><span>New</span></div>
                         <a href="#"><img class="card-img-top"
@@ -115,74 +114,31 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-md-3">
+                <div class="col-xl-3 col-lg-4 col-md-6">
                     <div class="card mb-3 shadow-sm">
                         <div class="ps-badge ps-badge--hot"><span>Hot</span></div>
                         <a href="#"><img class="card-img-top"
-                             data-src="holder.js/100px300?theme=thumb&bg=55595c&fg=eceeef&text=产品图片 328x300"
+                                         data-src="holder.js/100px300?theme=thumb&bg=55595c&fg=eceeef&text=产品图片 328x300"
                                          alt="Card image cap"></a>
                         <div class="card-body">
                             <p class="card-text">产品的介绍</p>
                         </div>
                     </div>
                 </div>
-                <div class="col-md-3">
+                <div class="col-xl-3 col-lg-4 col-md-6">
                     <div class="card mb-3 shadow-sm">
                         <a href="#"><img class="card-img-top"
-                             data-src="holder.js/100px300?theme=thumb&bg=55595c&fg=eceeef&text=产品图片 328x300"
+                                         data-src="holder.js/100px300?theme=thumb&bg=55595c&fg=eceeef&text=产品图片 328x300"
                                          alt="Card image cap"></a>
                         <div class="card-body">
                             <p class="card-text">产品的介绍</p>
                         </div>
                     </div>
                 </div>
-                <div class="col-md-3">
+                <div class="col-xl-3 col-lg-4 col-md-6">
                     <div class="card mb-3 shadow-sm">
                         <a href="#"><img class="card-img-top"
-                             data-src="holder.js/100px300?theme=thumb&bg=55595c&fg=eceeef&text=产品图片 328x300"
-                                         alt="Card image cap"></a>
-                        <div class="card-body">
-                            <p class="card-text">产品的介绍</p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-md-3">
-                    <div class="card mb-4 shadow-sm">
-                        <div class="ps-badge"><span>New</span></div>
-                        <a href="#"><img class="card-img-top"
-                             data-src="holder.js/100px300?theme=thumb&bg=55595c&fg=eceeef&text=产品图片 328x300"
-                                         alt="Card image cap"></a>
-                        <div class="card-body">
-                            <p class="card-text">产品的介绍</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-3">
-                    <div class="card mb-3 shadow-sm">
-                        <div class="ps-badge ps-badge--hot"><span>Hot</span></div>
-                        <a href="#"><img class="card-img-top"
-                             data-src="holder.js/100px300?theme=thumb&bg=55595c&fg=eceeef&text=产品图片 328x300"
-                                         alt="Card image cap"></a>
-                        <div class="card-body">
-                            <p class="card-text">产品的介绍</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-3">
-                    <div class="card mb-3 shadow-sm">
-                        <a href="#"><img class="card-img-top"
-                             data-src="holder.js/100px300?theme=thumb&bg=55595c&fg=eceeef&text=产品图片 328x300"
-                                         alt="Card image cap"></a>
-                        <div class="card-body">
-                            <p class="card-text">产品的介绍</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-3">
-                    <div class="card mb-3 shadow-sm">
-                        <a href="#"><img class="card-img-top"
-                             data-src="holder.js/100px300?theme=thumb&bg=55595c&fg=eceeef&text=产品图片 328x300"
+                                         data-src="holder.js/100px300?theme=thumb&bg=55595c&fg=eceeef&text=产品图片 328x300"
                                          alt="Card image cap"></a>
                         <div class="card-body">
                             <p class="card-text">产品的介绍</p>
@@ -193,6 +149,7 @@
         </div>
     </div>
 
+    <!--文章-->
     <div class="container">
 
         <div class="row mb-2">
@@ -236,26 +193,4 @@
 
     </div>
 
-</main>
-
-
-<footer class="text-muted text-center footer-bottom" style="background-color: rgba(0, 0, 0, .85);">
-    <div class="container">
-        <p class="d-block mb-3 text-muted">&copy; 2018. XXX有限公司 All rights reserved.</p>
-    </div>
-</footer>
-
-
-<!-- Bootstrap core JavaScript
-================================================== -->
-<script src="{{asset("js/app.js")}}"></script>
-
-<script>
-    Holder.addTheme('thumb', {
-        bg: '#55595c',
-        fg: '#eceeef',
-        text: 'Thumbnail'
-    });
-</script>
-</body>
-</html>
+@endsection
