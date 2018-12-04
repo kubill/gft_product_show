@@ -11,6 +11,11 @@
 |
 */
 
-Route::get('/', function () {
-    return view('index');
-});
+Route::get('/', 'IndexController@index')->name('index');
+Route::get('/products', 'IndexController@productList')->name('productList');
+Route::get('/product/{$id}', 'IndexController@productDetail')->name('product');
+Route::get('/articles', 'IndexController@articleList')->name('articleList');
+Route::get('/article/{$id}', 'IndexController@articleDetail')->name('article');
+Route::get('/about', 'IndexController@about')->name('about');
+Route::get('/contact', 'IndexController@contact')->name('contact');
+

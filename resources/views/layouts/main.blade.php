@@ -15,6 +15,8 @@
 
     <!-- Custom styles for this template -->
     <link href="{{asset('css/product.css')}}" rel="stylesheet">
+
+    @yield('style')
 </head>
 
 <body>
@@ -43,5 +45,6 @@
         text: 'Thumbnail'
     });
 </script>
+@yield('script')
 </body>
 </html>

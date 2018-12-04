@@ -396,6 +396,10 @@ h1, h2, h3, h4, h5, h6 {
     flex: 1;
 }
 
+.overflow-hidden {
+    overflow: hidden;
+}
+
 @media (min-width: 320px) {
     .ps-section__title:before {
         font-size: 3rem;
@@ -408,18 +412,22 @@ h1, h2, h3, h4, h5, h6 {
         flex: 1;
     }
 
+    main{
+        min-height: 661px;
+    }
+
     .ps-section__title:before {
         font-size: 4rem;
     }
 }
 
-.overflow-hidden {
-    overflow: hidden;
-}
-
 @media (min-width: 1440px) {
     .container {
         max-width: 1368px;
+    }
+
+    main{
+        min-height: 793px;
     }
 
     .ps-section__title:before {
@@ -430,6 +438,10 @@ h1, h2, h3, h4, h5, h6 {
 @media (min-width: 1920px) {
     .container {
         max-width: 1440px;
+    }
+
+    main{
+        min-height: 970px;
     }
 
     .ps-section__title:before {
@@ -443,6 +455,6 @@ h1, h2, h3, h4, h5, h6 {
     }
 
     .ps-section__title:before {
-        font-size: 4rem;
+        font-size: 5rem;
     }
 }
