@@ -1,58 +1,6 @@
+@extends('layouts.main')
 
-<!DOCTYPE html>
-<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
-<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
-<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
-<head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Foodee &mdash; 100% Free Fully Responsive HTML5 Template </title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="Free HTML5 Template by FREEHTML5.CO" />
-    <meta name="keywords" content="free html5, free template, free bootstrap, html5, css3, mobile first, responsive" />
-    <meta name="author" content="FREEHTML5.CO" />
-    <meta name="csrf-token" content="{{ csrf_token() }}">
-
-    <!-- Facebook and Twitter integration -->
-    <meta property="og:title" content=""/>
-    <meta property="og:image" content=""/>
-    <meta property="og:url" content=""/>
-    <meta property="og:site_name" content=""/>
-    <meta property="og:description" content=""/>
-    <meta name="twitter:title" content="" />
-    <meta name="twitter:image" content="" />
-    <meta name="twitter:url" content="" />
-    <meta name="twitter:card" content="" />
-
-    <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
-    <link rel="shortcut icon" href="favicon.ico">
-
-    <link rel="stylesheet" href="css/app.css">
-    <!-- Animate.css -->
-    {{--<link rel="stylesheet" href="css/animate.css">--}}
-    <!-- Icomoon Icon Fonts-->
-    <link rel="stylesheet" href="css/icomoon.css">
-    <!-- Simple Line Icons -->
-    <link rel="stylesheet" href="css/simple-line-icons.css">
-    <!-- Flexslider -->
-    {{--<link rel="stylesheet" href="css/flexslider.css">--}}
-    <!-- Bootstrap  -->
-    {{--<link rel="stylesheet" href="css/bootstrap.css">--}}
-
-    <link rel="stylesheet" href="css/style.css">
-
-
-    <!-- Modernizr JS -->
-    <script src="js/modernizr-2.6.2.min.js"></script>
-    <!-- FOR IE9 below -->
-    <!--[if lt IE 9]>
-    <script src="js/respond.min.js"></script>
-    <![endif]-->
-
-</head>
-<body>
-<div id="fh5co-container">
+@section('content')
 
     <div id="fh5co-home" class="js-fullheight" data-section="home">
 
@@ -63,7 +11,9 @@
                 <div class="container">
                     <div class="row">
                         <h1 class="to-animate">Foodee</h1>
-                        <h2 class="to-animate">Lovely Designed <span>by</span> <a href="#" target="_blank">freehtml5.co</a></h2>
+                        <h2 class="to-animate">Lovely Designed <span>by</span> <a href="#"
+                                                                                  target="_blank">freehtml5.co</a>
+                        </h2>
                     </div>
                 </div>
             </div>
@@ -107,19 +57,23 @@
             <div class="row">
                 <div class="fh5co-grid">
                     <div class="fh5co-v-half to-animate-2">
-                        <div class="fh5co-v-col-2 fh5co-bg-img" style="background-image: url(images/res_img_1.jpg)"></div>
+                        <div class="fh5co-v-col-2 fh5co-bg-img"
+                             style="background-image: url(images/res_img_1.jpg)"></div>
                         <div class="fh5co-v-col-2 fh5co-text fh5co-special-1 arrow-left">
                             <h2>Fresh Mushrooms</h2>
                             <span class="pricing">$7.50</span>
-                            <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
+                            <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia,
+                                there live the blind texts.</p>
                         </div>
                     </div>
                     <div class="fh5co-v-half to-animate-2">
-                        <div class="fh5co-v-col-2 fh5co-bg-img" style="background-image: url(images/res_img_1.jpg)"></div>
+                        <div class="fh5co-v-col-2 fh5co-bg-img"
+                             style="background-image: url(images/res_img_1.jpg)"></div>
                         <div class="fh5co-v-col-2 fh5co-text fh5co-special-1 arrow-left">
                             <h2>Fresh Mushrooms</h2>
                             <span class="pricing">$7.50</span>
-                            <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
+                            <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia,
+                                there live the blind texts.</p>
                         </div>
                     </div>
                 </div>
@@ -149,13 +103,14 @@
                         </li>
                         <li>
                             <blockquote>
-                                <p>"在我们了解科学之前，相信上帝创造宇宙是很理所当然的。但是现在科学已经提供了更让人信服的解释。我所说的‘我们将了解上帝的心意’的是指，如果上帝存在的话，我们会了解任何上帝知道的事情，但他并不存在。我是一位无神论者。"</p>
+                                <p>"在我们了解科学之前，相信上帝创造宇宙是很理所当然的。但是现在科学已经提供了更让人信服的解释。"</p>
                                 <p class="quote-author">&mdash; 史蒂芬·霍金</p>
                             </blockquote>
                         </li>
                         <li>
                             <blockquote>
-                                <p>&ldquo;Never work before breakfast; if you have to work before breakfast, eat your breakfast first.&rdquo;</p>
+                                <p>&ldquo;Never work before breakfast; if you have to work before breakfast, eat your
+                                    breakfast first.&rdquo;</p>
                                 <p class="quote-author">&mdash; Josh Billings</p>
                             </blockquote>
                         </li>
@@ -172,37 +127,11 @@
         <div class="fh5co-2col fh5co-bg to-animate-2" style="background-image: url(images/res_img_1.jpg)"></div>
         <div class="fh5co-2col fh5co-text">
             <h2 class="heading to-animate">关于我们</h2>
-            <p class="to-animate"><span class="firstcharacter">&nbsp;</span>华为是全球领先的ICT（信息与通信）基础设施和智能终端提供商，致力于把数字世界带入每个人、每个家庭、每个组织，构建万物互联的智能世界。我们在通信网络、IT、智能终端和云服务等领域为客户提供有竞争力、安全可信赖的产品、解决方案与服务，与生态伙伴开放合作，持续为客户创造价值，释放个人潜能，丰富家庭生活，激发组织创新。华为坚持围绕客户需求持续创新，加大基础研究投入，厚积薄发，推动世界进步。</p>
-            <p class="text-center to-animate"><a href="#" data-nav-section="about" class="btn btn-primary btn-outline">Get in touch</a></p>
+            <p class="to-animate"><span class="firstcharacter">&nbsp;</span>华为是全球领先的ICT（信息与通信）基础设施和智能终端提供商，致力于把数字世界带入每个人、每个家庭、每个组织，构建万物互联的智能世界。我们在通信网络、IT、智能终端和云服务等领域为客户提供有竞争力、安全可信赖的产品、解决方案与服务，与生态伙伴开放合作，持续为客户创造价值，释放个人潜能，丰富家庭生活，激发组织创新。华为坚持围绕客户需求持续创新，加大基础研究投入，厚积薄发，推动世界进步。
+            </p>
+            <p class="text-center to-animate"><a href="#" data-nav-section="about" class="btn btn-primary btn-outline">Get
+                    in touch</a></p>
         </div>
     </div>
 
-</div>
-
-<div id="fh5co-footer">
-    <div class="container">
-        <div class="row row-padded">
-            <div class="col-md-12 text-center">
-                <p class="to-animate">&copy; 2018 XXX科技有限公司
-                </p>
-                <p class="text-center to-animate"><a href="#" class="js-gotop">Go To Top</a></p>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-md-12 text-center">
-                <ul class="fh5co-social">
-                    <li class="to-animate-2"><a href="#"><i class="icon-weibo"></i></a></li>
-                    <li class="to-animate-2"><a href="#"><i class="icon-weixin"></i></a></li>
-                    <li class="to-animate-2"><a href="#"><i class="icon-instagram"></i></a></li>
-                </ul>
-            </div>
-        </div>
-    </div>
-</div>
-
-<!-- Main JS -->
-<script src="js/app.js"></script>
-<!-- Main JS -->
-<script src="js/main.js"></script>
-</body>
-</html>
+@endsection
