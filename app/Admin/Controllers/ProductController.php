@@ -23,8 +23,8 @@ class ProductController extends Controller
     public function index(Content $content)
     {
         return $content
-            ->header('Index')
-            ->description('description')
+            ->header('产品管理')
+            ->description('列表')
             ->body($this->grid());
     }
 
@@ -38,8 +38,8 @@ class ProductController extends Controller
     public function show($id, Content $content)
     {
         return $content
-            ->header('Detail')
-            ->description('description')
+            ->header('产品管理')
+            ->description('详细')
             ->body($this->detail($id));
     }
 
@@ -53,8 +53,8 @@ class ProductController extends Controller
     public function edit($id, Content $content)
     {
         return $content
-            ->header('Edit')
-            ->description('description')
+            ->header('产品管理')
+            ->description('编辑')
             ->body($this->form()->edit($id));
     }
 
@@ -67,8 +67,8 @@ class ProductController extends Controller
     public function create(Content $content)
     {
         return $content
-            ->header('Create')
-            ->description('description')
+            ->header('产品管理')
+            ->description('创建')
             ->body($this->form());
     }
 
@@ -81,12 +81,12 @@ class ProductController extends Controller
     {
         $grid = new Grid(new Product);
 
-        $grid->id('Id');
-        $grid->name('Name');
-        $grid->image('Image');
-        $grid->price('Price');
-        $grid->describe('Describe');
-        $grid->hot('Hot');
+        $grid->id('ID');
+        $grid->name('名称');
+        $grid->image('图片');
+        $grid->price('价格');
+        $grid->describe('描述');
+        $grid->hot('热门产品');
         $grid->created_at('Created at');
         $grid->updated_at('Updated at');
 
@@ -103,12 +103,12 @@ class ProductController extends Controller
     {
         $show = new Show(Product::findOrFail($id));
 
-        $show->id('Id');
-        $show->name('Name');
-        $show->image('Image');
-        $show->price('Price');
-        $show->describe('Describe');
-        $show->hot('Hot');
+        $show->id('ID');
+        $show->name('名称');
+        $show->image('图片');
+        $show->price('价格');
+        $show->describe('描述');
+        $show->hot('热门产品');
         $show->created_at('Created at');
         $show->updated_at('Updated at');
 
@@ -124,11 +124,11 @@ class ProductController extends Controller
     {
         $form = new Form(new Product);
 
-        $form->text('name', 'Name');
-        $form->image('image', 'Image');
-        $form->decimal('price', 'Price');
-        $form->text('describe', 'Describe');
-        $form->switch('hot', 'Hot');
+        $form->text('name', '名称');
+        $form->image('image', '图片');
+        $form->decimal('price', '价格');
+        $form->text('describe', '描述');
+        $form->switch('hot', '热门产品');
 
         return $form;
     }

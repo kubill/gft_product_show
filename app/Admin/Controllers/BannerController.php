@@ -82,7 +82,7 @@ class BannerController extends Controller
         $grid = new Grid(new Banner);
 
         $grid->id('ID');
-        $grid->path('路径');
+        $grid->path('路径')->lightbox(['zooming' => true]);
         $grid->display('是否显示');
         $grid->sort('顺序');
         $grid->created_at('Created at');
