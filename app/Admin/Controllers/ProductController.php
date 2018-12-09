@@ -83,7 +83,7 @@ class ProductController extends Controller
 
         $grid->id('ID');
         $grid->name('名称');
-        $grid->image('图片');
+        $grid->image('图片')->lightbox(['zooming' => true]);
         $grid->price('价格');
         $grid->describe('描述');
         $grid->hot('热门产品');

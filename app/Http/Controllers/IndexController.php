@@ -21,10 +21,10 @@ class IndexController extends Controller
      */
     public function index()
     {
-        $banner = 1;//Banner::get();//轮播图
-        $product = 1;//Product::get();//8个产品
+        $banners = Banner::where('display', 1)->take(3)->get();//轮播图
+        $products = Product::where('hot',1)->take(2)->get();//Product::get();//8个产品
         $article = 1;//Article::get();//2个文章
-        return view('index', compact('banner', 'product', 'article'));
+        return view('index', compact('banners', 'products'));
     }
 
     /**

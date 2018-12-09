@@ -18,9 +18,9 @@
                 </div>
             </div>
             <ul class="slides">
-                <li style="background-image: url(images/slide_1.jpg);" data-stellar-background-ratio="0.5"></li>
-                <li style="background-image: url(images/slide_2.jpg);" data-stellar-background-ratio="0.5"></li>
-                <li style="background-image: url(images/slide_3.jpg);" data-stellar-background-ratio="0.5"></li>
+                @foreach ($banners as $banner)
+                    <li style="background-image: url({{ asset('uploads/'.$banner->path) }});" data-stellar-background-ratio="0.5"></li>
+                @endforeach
             </ul>
 
         </div>
@@ -56,26 +56,17 @@
             </div>
             <div class="row">
                 <div class="fh5co-grid">
-                    <div class="fh5co-v-half to-animate-2">
-                        <div class="fh5co-v-col-2 fh5co-bg-img"
-                             style="background-image: url(images/res_img_1.jpg)"></div>
-                        <div class="fh5co-v-col-2 fh5co-text fh5co-special-1 arrow-left">
-                            <h2>Fresh Mushrooms</h2>
-                            <span class="pricing">$7.50</span>
-                            <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia,
-                                there live the blind texts.</p>
+                    @foreach ($products as $product)
+                        <div class="fh5co-v-half to-animate-2">
+                            <div class="fh5co-v-col-2 fh5co-bg-img"
+                                 style="background-image: url({{ asset('uploads/'.$product->image) }})"></div>
+                            <div class="fh5co-v-col-2 fh5co-text fh5co-special-1 arrow-left">
+                                <h2>{{ $product->name }}</h2>
+                                <span class="pricing">￥{{ $product->price }}</span>
+                                <p>{{ $product->describe }}</p>
+                            </div>
                         </div>
-                    </div>
-                    <div class="fh5co-v-half to-animate-2">
-                        <div class="fh5co-v-col-2 fh5co-bg-img"
-                             style="background-image: url(images/res_img_1.jpg)"></div>
-                        <div class="fh5co-v-col-2 fh5co-text fh5co-special-1 arrow-left">
-                            <h2>Fresh Mushrooms</h2>
-                            <span class="pricing">$7.50</span>
-                            <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia,
-                                there live the blind texts.</p>
-                        </div>
-                    </div>
+                    @endforeach
                 </div>
             </div>
 
