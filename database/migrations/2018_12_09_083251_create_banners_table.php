@@ -17,6 +17,7 @@ class CreateBannersTable extends Migration
             $table->increments('id')->autoIncrement();
             $table->string('path')->comment('图片地址');
             $table->boolean('display')->comment('是否显示');
+            $table->integer('sort')->comment('顺序');
             $table->timestamps();
         });
     }

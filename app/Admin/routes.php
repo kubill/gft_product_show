@@ -13,4 +13,6 @@ Route::group([
     $router->get('/', 'HomeController@index');
 
     $router->resource('setting/articles', 'ArticleController');
+    $router->resource('setting/banners', 'BannerController');
+    $router->resource('setting/products', 'ProductController');
 });
