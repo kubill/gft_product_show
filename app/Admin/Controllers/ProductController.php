@@ -126,7 +126,7 @@ class ProductController extends Controller
 
         $form->text('name', '名称');
         $form->image('image', '图片');
-        $form->decimal('price', '价格');
+        $form->currency('price','价格')->symbol('￥');
         $form->text('describe', '描述');
         $form->switch('hot', '热门产品');
 
