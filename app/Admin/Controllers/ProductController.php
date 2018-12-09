@@ -86,9 +86,11 @@ class ProductController extends Controller
         $grid->image('图片')->lightbox(['zooming' => true]);
         $grid->price('价格');
         $grid->describe('描述');
-        $grid->hot('热门产品');
-        $grid->created_at('Created at');
-        $grid->updated_at('Updated at');
+        $grid->hot('热门产品')->display(function ($value) {
+            return $value ? '是' : '否';
+        });
+        $grid->created_at('添加时间');
+        $grid->updated_at('更新时间');
 
         return $grid;
     }
@@ -105,12 +107,14 @@ class ProductController extends Controller
 
         $show->id('ID');
         $show->name('名称');
-        $show->image('图片');
+        $show->image('图片')->image();
         $show->price('价格');
         $show->describe('描述');
-        $show->hot('热门产品');
-        $show->created_at('Created at');
-        $show->updated_at('Updated at');
+        $show->hot('热门产品')->as(function ($value) {
+            return $value ? '是' : '否';
+        });;
+        $show->created_at('添加时间');
+        $show->updated_at('更新时间');
 
         return $show;
     }
@@ -126,7 +130,7 @@ class ProductController extends Controller
 
         $form->text('name', '名称');
         $form->image('image', '图片');
-        $form->currency('price','价格')->symbol('￥');
+        $form->currency('price', '价格')->symbol('￥');
         $form->text('describe', '描述');
         $form->switch('hot', '热门产品');
 
