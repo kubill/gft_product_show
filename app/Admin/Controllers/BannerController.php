@@ -89,7 +89,7 @@ class BannerController extends Controller
         $grid->sort('顺序');
         $grid->created_at('添加时间');
         $grid->updated_at('更新时间');
-
+        $grid->model()->orderBy('sort', 'asc');
         return $grid;
     }
 
