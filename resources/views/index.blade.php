@@ -49,7 +49,6 @@
         });
 
         $(window).scroll(function () {
-            console.log($(window).scrollTop());
             if ($(window).scrollTop() == 0) {
                 swiper.mousewheel.enable(); //启用鼠标滑轮控制
             } else {
@@ -57,9 +56,6 @@
             }
         });
     });
-</script>
-
-<script>
     var swiper = new Swiper('.swiper-container', {
         direction: 'vertical',
         speed: 500,

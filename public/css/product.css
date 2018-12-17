@@ -79,6 +79,8 @@ body {
     background-position: top center;
     float: left;
     width: 100%;
+    margin-bottom: 0 !important;
+    padding-bottom: 30px;
 }
 
 .swiper-item {
