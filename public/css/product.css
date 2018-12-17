@@ -133,18 +133,6 @@ body {
     color: #fff;
 }
 
-#fh5co-featured .fh5co-heading .heading:before, #fh5co-featured .fh5co-heading .heading::before {
-    height: 64px;
-    width: 64px;
-    position: absolute;
-    content: "";
-    background: url(../images/0103-served-plate_64.png) no-repeat;
-    top: 0;
-    left: 50%;
-    margin-top: -50px;
-    margin-left: -32px;
-}
-
 #fh5co-featured .fh5co-heading .sub-heading {
     color: #a99c92;
 }
