@@ -15,7 +15,7 @@
     <div class="container">
 
         <!-- Navbar: Brand -->
-        <a class="navbar-brand d-lg-none" href="index.html">公司名字</a>
+        <a class="navbar-brand d-lg-none" href="#">公司名字</a>
 
         <!-- Navbar: Toggler -->
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
