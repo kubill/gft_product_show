@@ -160,7 +160,6 @@
         direction: 'vertical',
         speed: 500,
         slidesPerView: 1,
-        spaceBetween: 30,
         mousewheel: {
             releaseOnEdges: true
         },
