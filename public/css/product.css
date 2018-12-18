@@ -1889,14 +1889,21 @@ h1, h2, h3, h4, h5, h6 {
     background-color: #63e30c;
 }
 
-.swiper-pagination-bullet-active {
-    background: #63e30c;
-}
-
 .navbar-brand {
     color: #63e30c !important;
 }
 
 .fh5co-heading .heading:after {
+    background: #63e30c;
+}
+
+.swiper-pagination-bullet {
+    width: 6px;
+    height: 12px;
+    border-radius: 0%;
+    background: #ffffff;
+}
+
+.swiper-pagination-bullet-active {
     background: #63e30c;
 }
