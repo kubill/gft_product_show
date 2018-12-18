@@ -11,7 +11,7 @@
 
 <body>
 
-<nav class="navbar navbar-expand-lg fixed-top navbar-light">
+<nav class="navbar navbar-expand-lg fixed-top navbar-light" style="background: rgb(1,1,1,0.5);">
     <div class="container">
 
         <!-- Navbar: Brand -->
@@ -25,11 +25,14 @@
         <!-- Navbar: Collapse -->
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
 
+            <!-- Navbar: Brand -->
+            <a class="navbar-brand d-none d-lg-flex" href="index.html">
+                公司名字 / logo
+            </a>
+
             <!-- Navbar navigation: Left -->
-            <ul class="navbar-nav mr-auto">
-                <li class="nav-item">
-                    <a class="nav-link" href="#">主页</a>
-                </li>
+            {{--<ul class="navbar-nav mr-auto">--}}
+
                 {{--<li class="nav-item dropdown">--}}
                     {{--<a class="nav-link dropdown-toggle" href="http://example.com" id="nav-item__menu" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">--}}
                         {{--Menu--}}
@@ -39,18 +42,17 @@
                         {{--<a class="dropdown-item" href="menu_no-images.html">Menu: No Images</a>--}}
                     {{--</div>--}}
                 {{--</li>--}}
-                <li class="nav-item">
-                    <a class="nav-link" href="#">产品</a>
-                </li>
-            </ul>
 
-            <!-- Navbar: Brand -->
-            <a class="navbar-brand d-none d-lg-flex" href="index.html">
-                公司名字 / logo
-            </a>
+            {{--</ul>--}}
 
             <!-- Navbar navigation: Right -->
             <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="#">主页</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">产品</a>
+                </li>
                 <li class="nav-item">
                     <a class="nav-link" href="#">新闻</a>
                 </li>
