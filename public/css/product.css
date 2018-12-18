@@ -374,10 +374,6 @@ h1, h2, h3, h4, h5, h6 {
     color: #000;
 }
 
-p {
-    margin-bottom: 30px;
-}
-
 .btn {
     margin-right: 4px;
     margin-bottom: 4px;
@@ -1547,7 +1543,7 @@ p {
 #fh5co-footer {
     width: 100%;
     background: rgba(0, 0, 0, 0.9);
-    padding: 7em 0;
+    padding: 4em 0;
     z-index: 1;
     font-size: 14px;
     line-height: 1.5;
@@ -1601,7 +1597,8 @@ p {
 
 #fh5co-container, .fh5co-nav-toggle, #fh5co-footer {
     z-index: 2;
-    position: relative;
+    position: absolute;
+    bottom: 0;
 }
 
 #fh5co-offcanvas {
@@ -1893,5 +1890,13 @@ p {
 }
 
 .swiper-pagination-bullet-active {
+    background: #63e30c;
+}
+
+.navbar-brand {
+    color: #63e30c !important;
+}
+
+.fh5co-heading .heading:after {
     background: #63e30c;
 }

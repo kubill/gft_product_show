@@ -15,7 +15,7 @@
     <div class="container">
 
         <!-- Navbar: Brand -->
-        <a class="navbar-brand d-lg-none" href="#">公司名字</a>
+        <a class="navbar-brand d-lg-none" href="#">{{ config('product_name') }}</a>
 
         <!-- Navbar: Toggler -->
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -27,7 +27,7 @@
 
             <!-- Navbar: Brand -->
             <a class="navbar-brand d-none d-lg-flex" href="index.html">
-                公司名字 / logo
+                {{ config('product_name') }}
             </a>
 
             <!-- Navbar navigation: Left -->
@@ -108,23 +108,19 @@
         </div>
     </div>
 
-    <div id="fh5co-footer" class="animated" style="display: none;height: 298px;">
+    <div id="fh5co-footer" class="animated" style="display: none;">
         <div class="container">
-            <div class="row row-padded">
-                <div class="col-md-12 text-center">
-                    <p class="to-animate fadeIn animated">© 2018 XXX科技有限公司
-                    </p>
-                    <p class="text-center to-animate fadeIn animated"><a href="#" class="js-gotop">Go To Top</a></p>
-                </div>
-            </div>
             <div class="row">
+                {{--<div class="col-md-6 text-center">--}}
+                    {{--<p class="to-animate fadeIn animated">Address:{{ config('address') }}</p>--}}
+                {{--</div>--}}
+                {{--<div class="col-md-6 text-center">--}}
+                    {{--<p class="to-animate fadeIn animated">Address:{{ config('address') }}</p>--}}
+                {{--</div>--}}
                 <div class="col-md-12 text-center">
-                    <ul class="fh5co-social">
-                        <li class="to-animate-2 fadeInUp animated"><a href="#"><i class="icon-weibo"></i></a></li>
-                        <li class="to-animate-2 fadeInUp animated"><a href="#"><i class="icon-weixin"></i></a></li>
-                        <li class="to-animate-2 fadeInUp animated"><a href="#"><i class="icon-instagram"></i></a></li>
-                    </ul>
+                    <p class="to-animate fadeIn animated">© {{date('Y')}} {{ config('company_name') }}</p>
                 </div>
+
             </div>
         </div>
     </div>
