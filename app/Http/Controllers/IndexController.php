@@ -35,7 +35,8 @@ class IndexController extends Controller
      */
     public function productList(Product $product)
     {
-        return view('product_list');
+        $products = Product::get();
+        return view('product_list',compact('products'));
     }
 
     /**
