@@ -4,12 +4,12 @@ html, body {
 }
 
 body {
-    background: #eee;
     font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
     font-size: 14px;
     color: #000;
     margin: 0;
     padding: 0;
+    background: #130d08 url(../images/wood_1.png) repeat;
 }
 
 
@@ -31,7 +31,6 @@ body {
 }
 
 .footer {
-    width: 100%;
     background: rgba(0, 0, 0, 0.9);
     padding: 4em 0;
     z-index: 1;
@@ -41,6 +40,8 @@ body {
 }
 
 .content-container{
-    position: relative;
     margin-top: 5rem;
+}
+.pb-5, .py-5 {
+    margin-top: 3.5rem!important;
 }

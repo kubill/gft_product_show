@@ -28,14 +28,4 @@
 @endsection
 
 @section('js')
-    <script>
-        $(document).ready(function () {
-            $(".content-container").css('min-height', window.innerHeight + 'px');
-
-            $(window).resize(function () {
-                $(".content-container").css('min-height', window.innerHeight + 'px');
-            });
-        });
-
-    </script>
 @endsection
