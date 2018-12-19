@@ -32,10 +32,10 @@
             <!-- Navbar navigation: Right -->
             <ul class="navbar-nav ml-auto">
                 <li class="nav-item">
-                    <a class="nav-link" href="#">主页</a>
+                    <a class="nav-link" href="{{route('index')}}">主页</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">产品</a>
+                    <a class="nav-link" href="{{route('productList')}}">产品</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="#">新闻</a>
