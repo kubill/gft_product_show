@@ -39,11 +39,11 @@
                 <li class="nav-item">
                     <a class="nav-link" href="{{route('productList')}}">产品</a>
                 </li>
+                {{--<li class="nav-item">--}}
+                    {{--<a class="nav-link" href="#">新闻</a>--}}
+                {{--</li>--}}
                 <li class="nav-item">
-                    <a class="nav-link" href="#">新闻</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">关于</a>
+                    <a class="nav-link" href="{{route('about')}}">关于</a>
                 </li>
             </ul>
 

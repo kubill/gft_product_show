@@ -31,21 +31,6 @@
                 {{ config('product_name') }}
             </a>
 
-            <!-- Navbar navigation: Left -->
-            {{--<ul class="navbar-nav mr-auto">--}}
-
-                {{--<li class="nav-item dropdown">--}}
-                    {{--<a class="nav-link dropdown-toggle" href="http://example.com" id="nav-item__menu" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">--}}
-                        {{--Menu--}}
-                    {{--</a>--}}
-                    {{--<div class="dropdown-menu" aria-labelledby="nav-item__menu">--}}
-                        {{--<a class="dropdown-item" href="menu.html">Menu: Standard</a>--}}
-                        {{--<a class="dropdown-item" href="menu_no-images.html">Menu: No Images</a>--}}
-                    {{--</div>--}}
-                {{--</li>--}}
-
-            {{--</ul>--}}
-
             <!-- Navbar navigation: Right -->
             <ul class="navbar-nav ml-auto">
                 <li class="nav-item">
@@ -54,11 +39,11 @@
                 <li class="nav-item">
                     <a class="nav-link" href="{{route('productList')}}">产品</a>
                 </li>
+                {{--<li class="nav-item">--}}
+                    {{--<a class="nav-link" href="#">新闻</a>--}}
+                {{--</li>--}}
                 <li class="nav-item">
-                    <a class="nav-link" href="#">新闻</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">关于</a>
+                    <a class="nav-link" href="{{route('about')}}">关于</a>
                 </li>
             </ul>
 
@@ -113,7 +98,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-3"></div>
-                <div class="col-md-3 text-center"><p><i class="fa fa-home"></i> 3rd Floor, Building 6, Wantou Industrial Zone, Hongxing Village, Songgang, Bao'an District, Shenzhen</p></div>
+                <div class="col-md-3 text-center"><address><p><i class="fa fa-home"></i> 3rd Floor, Building 6, Wantou Industrial Zone, Hongxing Village, Songgang, Bao'an District, Shenzhen</p></address></div>
                 <div class="col-md-6 text-center">
                     <div class="row">
                         <div class="col-md-12 text-left">
