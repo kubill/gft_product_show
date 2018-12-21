@@ -11,7 +11,7 @@
 
 <body>
 
-<nav class="navbar navbar-expand-lg fixed-top navbar-light" style="background: rgb(1,1,1,0.5);">
+<nav class="navbar navbar-expand-lg fixed-top navbar-light" style="background-color:rgba(1,1,1,0.5);">
     <div class="container">
 
         <!-- Navbar: Brand -->
