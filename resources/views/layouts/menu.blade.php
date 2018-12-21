@@ -1,22 +1,40 @@
-<nav class="site-header sticky-top py-1">
-    <div class="container d-flex flex-column flex-md-row justify-content-between" style="max-width: 1140px">
-        <a class="py-2" href="{{route('index')}}">
-            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
-                 stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                 class="d-block mx-auto">
-                <circle cx="12" cy="12" r="10"></circle>
-                <line x1="14.31" y1="8" x2="20.05" y2="17.94"></line>
-                <line x1="9.69" y1="8" x2="21.17" y2="8"></line>
-                <line x1="7.38" y1="12" x2="13.12" y2="2.06"></line>
-                <line x1="9.69" y1="16" x2="3.95" y2="6.06"></line>
-                <line x1="14.31" y1="16" x2="2.83" y2="16"></line>
-                <line x1="16.62" y1="12" x2="10.88" y2="21.94"></line>
-            </svg>
-        </a>
-        <a class="py-2 d-none d-md-inline-block" href="{{route('index')}}">主页</a>
-        <a class="py-2 d-none d-md-inline-block" href="{{route('productList')}}">产品</a>
-        <a class="py-2 d-none d-md-inline-block" href="{{route('articleList')}}">新闻</a>
-        <a class="py-2 d-none d-md-inline-block" href="{{route('about')}}">关于</a>
-        <a class="py-2 d-none d-md-inline-block" href="{{route('contact')}}">联系</a>
-    </div>
+<nav class="navbar navbar-expand-lg fixed-top navbar-light" style="background: rgba(1,1,1,0.5);">
+    <div class="container">
+
+        <!-- Navbar: Brand -->
+        <a class="navbar-brand d-lg-none" href="#">{{ config('product_name') }}</a>
+
+        <!-- Navbar: Toggler -->
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <!-- Navbar: Collapse -->
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+
+            <!-- Navbar: Brand -->
+            <a class="navbar-brand d-none d-lg-flex" href="{{ route('index') }}">
+                {{ config('product_name') }}
+            </a>
+
+            <!-- Navbar navigation: Right -->
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="{{route('index')}}">home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{{route('productList')}}">products</a>
+                </li>
+                {{--<li class="nav-item">--}}
+                {{--<a class="nav-link" href="#">新闻</a>--}}
+                {{--</li>--}}
+                <li class="nav-item">
+                    <a class="nav-link" href="{{route('about')}}">about</a>
+                </li>
+            </ul>
+
+        </div> <!-- / .navbar-collapse -->
+
+    </div> <!-- / .container -->
 </nav>

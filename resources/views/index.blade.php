@@ -12,45 +12,7 @@
 
 <body>
 
-<nav class="navbar navbar-expand-lg fixed-top navbar-light" style="background-color:rgba(1,1,1,0.5);">
-    <div class="container">
-
-        <!-- Navbar: Brand -->
-        <a class="navbar-brand d-lg-none" href="#">{{ config('product_name') }}</a>
-
-        <!-- Navbar: Toggler -->
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-
-        <!-- Navbar: Collapse -->
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-
-            <!-- Navbar: Brand -->
-            <a class="navbar-brand d-none d-lg-flex" href="{{ route('index') }}">
-                {{ config('product_name') }}
-            </a>
-
-            <!-- Navbar navigation: Right -->
-            <ul class="navbar-nav ml-auto">
-                <li class="nav-item">
-                    <a class="nav-link" href="{{route('index')}}">主页</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="{{route('productList')}}">产品</a>
-                </li>
-                {{--<li class="nav-item">--}}
-                    {{--<a class="nav-link" href="#">新闻</a>--}}
-                {{--</li>--}}
-                <li class="nav-item">
-                    <a class="nav-link" href="{{route('about')}}">关于</a>
-                </li>
-            </ul>
-
-        </div> <!-- / .navbar-collapse -->
-
-    </div> <!-- / .container -->
-</nav>
+@include('layouts.menu')
 
 <!-- Swiper -->
 <div class="swiper-container">
@@ -71,7 +33,7 @@
         <div class="container">
             <div class="row text-center fh5co-heading row-padded">
                 <div class="col-md-12">
-                    <h2 class="heading to-animate">热卖产品</h2>
+                    <h2 class="heading to-animate navbar-brand">Quality Control</h2>
                     {{--<p class="sub-heading to-animate">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>--}}
                 </div>
             </div>
