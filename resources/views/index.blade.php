@@ -117,18 +117,18 @@
                 <div class="col-md-6 text-center">
                     <div class="row">
                         <div class="col-md-12 text-left">
-                            <i class="fa fa-phone"> +86-13510717855</i>
+                            <p><i class="fa fa-phone"> +86-13510717855</i></p>
                         </div>
                         <div class="col-md-12 text-left">
-                            <i class="fa fa-whatsapp"> +86-13510717855</i>
+                            <p><i class="fa fa-whatsapp"> +86-13510717855</i></p>
                         </div>
                         <div class="col-md-12 text-left">
-                            <i class="fa fa-envelope-o"> Greenfiretech@163.com</i>
+                            <p><i class="fa fa-envelope-o"> Greenfiretech@163.com</i></p>
                         </div>
                     </div>
                 </div>
                 <div class="col-md-12 text-center">
-                    <p>© {{date('Y')}} {{ config('product_name') }}  All rights reserved.</p>
+                    <p>© {{date('Y')}} <a href="/">{{ config('product_name') }}</a> All rights reserved.</p>
                 </div>
             </div>
         </div>

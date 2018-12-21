@@ -17,6 +17,10 @@ body {
     color: #63e30c;
 }
 
+a:focus,a:hover,a{
+    color: #63e30c;
+}
+
 ::selection {
     color: #fff;
     background-color: #63e30c;

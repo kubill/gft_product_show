@@ -76,7 +76,7 @@
                 </div>
             </div>
             <div class="col-md-12 text-center">
-                <p>© {{date('Y')}} {{ config('product_name') }} All rights reserved.</p>
+                <p>© {{date('Y')}} <a href="/">{{ config('product_name') }}</a> All rights reserved.</p>
             </div>
         </div>
     </div>
