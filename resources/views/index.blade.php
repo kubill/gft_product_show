@@ -6,7 +6,7 @@
     <link href="https://cdn.bootcss.com/twitter-bootstrap/4.1.3/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="https://simpleqode.bitbucket.io/touche/assets/css/theme.min.css">
     <link href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="css/index.css">
+    <link rel="stylesheet" type="text/css" href="css/product.css">
 
 </head>
 
@@ -27,40 +27,29 @@
     <div class="swiper-pagination"></div>
 </div>
 
-<div class="content"></div>
-<div class="footer">
-    <div id="fh5co-featured" data-section="features" style="display: none;">
-        <div class="container">
-            <div class="row text-center fh5co-heading row-padded">
-                <div class="col-md-12">
-                    <h2 class="heading to-animate navbar-brand">Quality Control</h2>
-                    {{--<p class="sub-heading to-animate">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>--}}
-                </div>
+<div class="container-index" style="">
+    <div class="container-fluid text-center" style="padding-bottom: 4rem;">
+        <div class="row">
+            <div class="col-md-12">
+                <h2 class="heading to-animate navbar-brand">Quality Control</h2>
             </div>
-            <div class="row">
-                <div class="fh5co-grid">
-                    @foreach ($products as $product)
-                        <div class="fh5co-v-half to-animate-2">
-                            <div class="fh5co-v-col-2 fh5co-bg-img"
-                                 style="background-image: url({{ asset('uploads/'.$product->image) }})"></div>
-                            <div class="fh5co-v-col-2 fh5co-text fh5co-special-1 arrow-left">
-                                <h2>{{ $product->name }}</h2>
-                                <span class="pricing">￥{{ $product->price }}</span>
-                                <p>{{ $product->describe }}</p>
-                            </div>
-                        </div>
-                    @endforeach
-                </div>
+            <div class="col-md-4">
+                <img src="images/qc1.jpg" class="img-fluid">
             </div>
-
+            <div class="col-md-4">
+                <img src="images/qc2.jpg" class="img-fluid">
+            </div>
+            <div class="col-md-4">
+                <img src="images/qc3.jpg" class="img-fluid">
+            </div>
         </div>
     </div>
-
-    <div id="fh5co-footer" class="animated" style="display: none;">
+    <footer class="footer">
         <div class="container">
             <div class="row">
                 <div class="col-md-3"></div>
-                <div class="col-md-3 text-center"><address><p><i class="fa fa-home"></i> 3rd Floor, Building 6, Wantou Industrial Zone, Hongxing Village, Songgang, Bao'an District, Shenzhen</p></address></div>
+                <div class="col-md-3 text-center"><p><i class="fa fa-home"></i> 3rd Floor, Building 6, Wantou Industrial
+                        Zone, Hongxing Village, Songgang, Bao'an District, Shenzhen</p></div>
                 <div class="col-md-6 text-center">
                     <div class="row">
                         <div class="col-md-12 text-left">
@@ -79,8 +68,7 @@
                 </div>
             </div>
         </div>
-    </div>
-
+    </footer>
 </div>
 
 

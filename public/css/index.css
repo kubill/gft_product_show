@@ -83,8 +83,6 @@ body {
     background-position: top center;
     float: left;
     width: 100%;
-    /*margin-bottom: 0 !important;*/
-    /*padding-bottom: 30px;*/
 }
 
 .swiper-item {
@@ -1907,6 +1905,7 @@ h1, h2, h3, h4, h5, h6 {
 .swiper-pagination-bullet-active {
     background: #63e30c;
 }
+
 .navbar .nav-link {
     font-size: 1rem;
 }
