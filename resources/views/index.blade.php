@@ -28,7 +28,7 @@
 </div>
 
 <div class="container-index" style="">
-    <div class="container-fluid text-center" style="padding-bottom: 4rem;">
+    <div class="container text-center" style="padding-bottom: 4rem;">
         <div class="row">
             <div class="col-md-12">
                 <h2 class="heading to-animate navbar-brand">Quality Control</h2>
