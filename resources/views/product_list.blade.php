@@ -11,14 +11,9 @@
                 </div><!-- /.col-lg-12 -->
 
                 @foreach ($products as $product)
-                    <div class="col-xl-12 col-lg-4 col-md-6">
-                        <div class="card text-center">
+                    <div class="col-xl-12 col-lg-12 col-md-12">
                             <a href="#"><img class="card-img" src="{{ asset('uploads/'.$product->image) }}"
                                              alt="{{ $product->name }}"></a>
-                            <div class="card-body">
-                                <p class="card-text">{{ $product->describe }}</p>
-                            </div>
-                        </div>
                     </div>
                 @endforeach
 

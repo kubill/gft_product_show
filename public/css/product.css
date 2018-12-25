@@ -134,18 +134,6 @@ a:focus, a:hover, a {
     padding-top: 30px !important;
 }
 
-.heading::before {
-    height: 64px;
-    width: 64px;
-    position: absolute;
-    content: "";
-    background: url(../images/0103-served-plate_64.png) no-repeat;
-    top: 0;
-    left: 50%;
-    margin-top: -50px;
-    margin-left: -32px;
-}
-
 .heading:after {
     content: "";
     position: absolute;
