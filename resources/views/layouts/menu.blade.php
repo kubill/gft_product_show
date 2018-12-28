@@ -30,7 +30,7 @@
                 {{--<a class="nav-link" href="#">新闻</a>--}}
                 {{--</li>--}}
                 <li class="nav-item">
-                    <a class="nav-link" href="{{route('about')}}">about</a>
+                    <a class="nav-link" href="{{route('about')}}">about us</a>
                 </li>
             </ul>
 
