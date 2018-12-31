@@ -4,7 +4,7 @@
     <title>index - {{ config('company_name') }}</title>
     <link href="https://cdn.bootcss.com/Swiper/4.4.5/css/swiper.min.css" rel="stylesheet">
     <link href="https://cdn.bootcss.com/twitter-bootstrap/4.1.3/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="https://simpleqode.bitbucket.io/touche/assets/css/theme.min.css">
+    <link rel="stylesheet" type="text/css" href="{{ asset('css/theme.css') }}">
     <link href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="css/product.css">
 

@@ -1,3 +1,7 @@
+html, body {
+    height: 100%;
+}
+
 body {
     font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
     font-size: 14px;
@@ -38,7 +42,8 @@ a:focus, a:hover, a {
 }
 
 .content-container {
-    margin-top: 5rem;
+    padding-top: 5rem;
+    min-height: 73.63%;
 }
 
 .container-index {
@@ -147,4 +152,15 @@ a:focus, a:hover, a {
     font-size: 14px;
     line-height: 1.5;
     color: rgba(255, 255, 255, 0.5);
+}
+
+.form-signin {
+    width: 100%;
+    max-width: 420px;
+    padding: 15px;
+    margin: auto;
+}
+
+.btn-primary {
+    border-color: #63e30c;
 }

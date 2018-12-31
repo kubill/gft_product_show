@@ -4,9 +4,9 @@
     <title>@yield('title') - {{ config('product_name') }}</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link href="https://cdn.bootcss.com/twitter-bootstrap/4.1.3/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="https://simpleqode.bitbucket.io/touche/assets/css/theme.min.css">
+    <link rel="stylesheet" type="text/css" href="{{ asset('css/theme.css') }}">
     <link href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="css/product.css">
+    <link rel="stylesheet" type="text/css" href="{{ asset('css/product.css') }}">
     @yield('css')
 </head>
 
@@ -18,7 +18,7 @@
     @yield('content')
 </div>
 
-<footer class="footer">
+<footer class="footer navbar-fixed-bottom">
     <div class="container">
         <div class="row">
             <div class="col-md-3"></div>

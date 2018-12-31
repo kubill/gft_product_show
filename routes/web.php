@@ -19,3 +19,7 @@ Route::get('/article/{$id}', 'IndexController@articleDetail')->name('article');
 Route::get('/about', 'IndexController@about')->name('about');
 Route::get('/contact', 'IndexController@contact')->name('contact');
 
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');

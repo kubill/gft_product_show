@@ -26,9 +26,9 @@
                 <li class="nav-item">
                     <a class="nav-link" href="{{route('productList')}}">products</a>
                 </li>
-                {{--<li class="nav-item">--}}
-                {{--<a class="nav-link" href="#">新闻</a>--}}
-                {{--</li>--}}
+                <li class="nav-item">
+                <a class="nav-link" href="{{ route('contact') }}">contact us</a>
+                </li>
                 <li class="nav-item">
                     <a class="nav-link" href="{{route('about')}}">about us</a>
                 </li>

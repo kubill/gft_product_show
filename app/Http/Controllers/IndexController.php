@@ -89,6 +89,7 @@ class IndexController extends Controller
      */
     public function contact()
     {
-        return view('contact');
+        $product = Product::query()->find(1);
+        return view('contact',compact('product'));
     }
 }
