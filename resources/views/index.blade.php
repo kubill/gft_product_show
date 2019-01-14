@@ -19,7 +19,8 @@
     <div class="swiper-wrapper">
         @foreach ($banners as $banner)
             <div class="swiper-slide">
-                <a target="_blank" class="swiper-item" style=" background-image:url({{ asset('uploads/'.$banner->path) }})"></a>
+                <a target="_blank" class="swiper-item"
+                   style=" background-image:url({{ asset('uploads/'.$banner->path) }})"></a>
             </div>
         @endforeach
     </div>
@@ -85,11 +86,12 @@
         $("div.footer").css('min-height', window.innerHeight + 'px');
 
         $(window).resize(function () {
-            $("div.content").css('margin-top', window.innerHeight)
+            $("div.content").css('margin-top', window.innerHeight);
             $("div.footer").css('min-height', window.innerHeight + 'px');
         });
 
         $(window).scroll(function () {
+            console.log($(window).scrollTop());
             if ($(window).scrollTop() == 0) {
                 swiper.mousewheel.enable(); //启用鼠标滑轮控制
             } else {
@@ -100,6 +102,7 @@
         $('#fh5co-featured').show();
         $('#fh5co-footer').show();
     });
+
     var swiper = new Swiper('.swiper-container', {
         direction: 'vertical',
         speed: 500,
@@ -110,8 +113,46 @@
         pagination: {
             el: '.swiper-pagination',
             clickable: true,
-        }
+        },
+        on: {
+            reachEnd: function () {
+                setTimeout(function () {
+                    enableMouseWheel();
+                }, 300);
+            },
+            slidePrevTransitionEnd: function(){
+                if(this.activeIndex < {{ $bannerAmount-1 }}){
+                    disabledMouseWheel();
+                }
+            },
+        },
     });
+
+    function disabledMouseWheel() {
+        if (document.addEventListener) {
+            document.addEventListener('DOMMouseScroll', scrollFunc, false);
+        }//W3C
+        window.onmousewheel = document.onmousewheel = scrollFunc;//IE/Opera/Chrome
+    }
+
+    function enableMouseWheel() {
+        if (document.addEventListener) {
+            document.addEventListener('DOMMouseScroll', scrollFunc1, true);
+
+        }
+        window.onmousewheel = document.onmousewheel = scrollFunc1;//IE/Opera/Chrome
+    }
+
+    function scrollFunc(evt) {
+        return false;
+    }
+
+    function scrollFunc1(evt) {
+        return true;
+    }
+
+    window.onload = disabledMouseWheel;
+
 </script>
 
 </body>
