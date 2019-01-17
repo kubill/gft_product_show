@@ -108,6 +108,7 @@ class ProductController extends Controller
         $show->id('ID');
         $show->name('名称');
         $show->image('图片')->image();
+        $show->pictures('图片')->images();
         $show->price('价格');
         $show->describe('描述');
         $show->hot('热门产品')->as(function ($value) {
@@ -129,7 +130,8 @@ class ProductController extends Controller
         $form = new Form(new Product);
 
         $form->text('name', '名称');
-        $form->image('image', '图片');
+        $form->image('image', '封面图片');
+        $form->multipleImage('pictures', '详细图片')->removable();;
         $form->currency('price', '价格')->symbol('￥');
         $form->text('describe', '描述');
         $form->switch('hot', '热门产品');

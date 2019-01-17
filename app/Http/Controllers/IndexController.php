@@ -47,7 +47,8 @@ class IndexController extends Controller
      */
     public function productDetail($id)
     {
-        return view();
+        $product = Product::find($id);
+        return view('product', compact('product'));
     }
 
     /**
