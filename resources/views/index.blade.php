@@ -60,7 +60,7 @@
                             <p><i class="fa fa-whatsapp"> +86-13510717855</i></p>
                         </div>
                         <div class="col-md-12 text-left">
-                            <p><i class="fa fa-envelope-o"> Greenfiretech@163.com</i></p>
+                            <p><i class="fa fa-envelope-o"> sales@greenfiretech.com</i></p>
                         </div>
                     </div>
                 </div>
