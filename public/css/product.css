@@ -56,7 +56,7 @@ a:focus, a:hover, a {
 }
 
 .pb-5, .py-5 {
-    margin-top: 3.5rem !important;
+    /*margin-top: 3.5rem !important;*/
 }
 
 .swiper-container {
@@ -163,4 +163,9 @@ a:focus, a:hover, a {
 
 .btn-primary {
     border-color: #63e30c;
+}
+
+.form-group.required label:after {
+    content:"*";
+    color:red;
 }

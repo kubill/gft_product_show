@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Banner;
+use App\Models\Comment;
 use App\Models\Product;
 use App\Models\Article;
 use Illuminate\Http\Request;
@@ -91,6 +92,15 @@ class IndexController extends Controller
     public function contact()
     {
         $product = Product::query()->find(1);
-        return view('contact', compact('product'));
+        $result = false;
+        return view('contact', compact('product', 'result'));
+    }
+
+    public function contackPost(Request $request)
+    {
+        $data = $request->all();
+        Comment::query()->create($data);
+        $result = true;
+        return view('contact', compact('result'));
     }
 }

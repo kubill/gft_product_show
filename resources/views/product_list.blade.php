@@ -7,7 +7,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
-                    <h3 class="ps-section__title" data-mask="products">- P r o d u c t L i s t</h3>
+                    <h3 class="ps-section__title" data-mask="products">- P r o d u c t   L i s t</h3>
                 </div><!-- /.col-lg-12 -->
 
                 @foreach ($products as $product)

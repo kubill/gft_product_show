@@ -18,6 +18,7 @@ Route::get('/articles', 'IndexController@articleList')->name('articleList');
 Route::get('/article/{id}', 'IndexController@articleDetail')->name('article');
 Route::get('/about', 'IndexController@about')->name('about');
 Route::get('/contact', 'IndexController@contact')->name('contact');
+Route::post('/contact', 'IndexController@contackPost')->name('contact.post');
 
 
 Auth::routes();
