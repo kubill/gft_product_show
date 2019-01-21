@@ -65,7 +65,7 @@
                     </div>
                 </div>
                 <div class="col-md-12 text-center">
-                    <p>© {{date('Y')}} <a href="/">{{ config('product_name') }}</a> All rights reserved.</p>
+                    <p>© {{date('Y')}} <a href="/">{{ config('product_name') }}</a> All rights reserved. | <a href="http://www.miibeian.gov.cn/" target="_blank">粤ICP备19002091号-1</a></p>
                 </div>
             </div>
         </div>
