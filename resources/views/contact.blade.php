@@ -10,17 +10,24 @@
                     <div class="col-lg-12">
                         <h3 class="ps-section__title" data-mask="products">- C o n t a c t</h3>
                     </div>
-
+                    <hr class="mb-4">
+                    <div class="col-md-12">
+                        <h3><strong>Shen Zhen Green Fire Tech Co., LTD</strong></h3>
+                    </div>
+                    <hr class="mb-4">
                     <div class="col-md-12 row">
-                        <div class="col-md-4">
-                            <h3><i class="fa fa-phone"> +86-13510717855</i></h3>
-                        </div>
-                        <div class="col-md-4">
-                            <h3><i class="fa fa-whatsapp"> +86-13510717855</i></h3>
-                        </div>
-                        <div class="col-md-4">
-                            <h3><i class="fa fa-envelope-o"> sales@greenfiretech.com</i></h3>
-                        </div>
+                            <h3><i class="fa fa-phone"><strong>Phone Number:</strong> +86-13510717855</i></h3>
+
+                        {{--<div class="col-md-4">--}}
+                            {{--<h3><i class="fa fa-envelope-o"> sales@greenfiretech.com</i></h3>--}}
+                        {{--</div>--}}
+                    </div>
+                    <div class="col-md-12 row">
+                        <h3><i class="fa fa-whatsapp"><strong>Whatsapp:</strong> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;+86-13510717855</i></h3>
+                    </div>
+                    <hr class="mb-4">
+                    <div class="col-md-12 row">
+                        <h3><i class="fa fa-home"></i><strong>Address:</strong> 3rd Floor, Building 6, Wantou Industrial Zone, Hongxing Village, Songgang, Bao'an District, Shenzhen</i></h3>
                     </div>
                     <hr class="mb-4">
                     <form action="{{ route('contact.post') }}" method="post" class="needs-validation" novalidate="">
