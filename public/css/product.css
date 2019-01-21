@@ -169,3 +169,10 @@ a:focus, a:hover, a {
     content:"*";
     color:red;
 }
+
+.contact h1{
+    font-size: 3rem;
+}
+.contact h1,h2,h3,h4,h5,h6{
+    font-family: "Lucida Sans Unicode", "Lucida Grande", Arial, Helvetica, sans-serif !important;
+}
