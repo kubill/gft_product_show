@@ -31,9 +31,9 @@
 <div class="container-index" style="">
     <div class="container text-center" style="padding-bottom: 4rem;">
         <div class="row">
-            <div class="col-md-12">
-                <h2 class="heading to-animate navbar-brand">Quality Control</h2>
-            </div>
+            {{--<div class="col-md-12">--}}
+                {{--<h2 class="heading to-animate navbar-brand">Quality Control</h2>--}}
+            {{--</div>--}}
             <div class="col-md-4">
                 <img src="images/qc1.jpg" class="img-fluid">
             </div>
