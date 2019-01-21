@@ -19,7 +19,7 @@
                         {{--</div>--}}
                     </div>
                     <div class="col-md-12 row">
-                        <h3><strong>Whatsapp:</strong> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;+86-13510717855
+                        <h3><strong>Whatsapp:</strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;+86-13510717855
                         </h3>
                     </div>
                     <div class="col-md-12 row">
