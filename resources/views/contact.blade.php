@@ -5,33 +5,31 @@
 @section('content')
     <div class="album py-5 bg-light">
         <div class="container">
-            <div class="row">
+            <div class="row contact">
                 <div class="col-md-12">
-                    <div class="col-lg-12">
-                        <h3 class="ps-section__title" data-mask="products">- C o n t a c t</h3>
+
+                    <div class="col-md-12 row">
+                        <h1><strong>Shen Zhen Green Fire Tech Co., LTD</strong></h1>
                     </div>
-                    <hr class="mb-4">
-                    <div class="col-md-12">
-                        <h3><strong>Shen Zhen Green Fire Tech Co., LTD</strong></h3>
-                    </div>
-                    <hr class="mb-4">
-                    <div class="col-md-12">
+                    <div class="col-md-12 row">
                         <h3><strong>Phone Number:</strong> +86-13510717855</h3>
 
                         {{--<div class="col-md-4">--}}
                         {{--<h3><i class="fa fa-envelope-o"> sales@greenfiretech.com</i></h3>--}}
                         {{--</div>--}}
                     </div>
-                    <div class="col-md-12">
+                    <div class="col-md-12 row">
                         <h3><strong>Whatsapp:</strong> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;+86-13510717855
                         </h3>
                     </div>
-                    <hr class="mb-4">
-                    <div class="col-md-12">
+                    <div class="col-md-12 row">
                         <h3></i><strong>Address:</strong> 3rd Floor, Building 6, Wantou Industrial Zone, Hongxing
                             Village, Songgang, Bao'an District, Shenzhen</h3>
                     </div>
                     <hr class="mb-4">
+                    <div class="col-lg-12 row">
+                        <h3><strong>CONTACT US</strong></h3>
+                    </div>
                     <form action="{{ route('contact.post') }}" method="post" class="needs-validation" novalidate="">
                         {{ csrf_field() }}
                         <div class="form-row">
