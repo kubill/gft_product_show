@@ -19,7 +19,7 @@
                         </h3>
                     </div>
                     <div class="col-md-12 row">
-                        <h3><strong>Email:</strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;;&nbsp;;&nbsp;sales@greenfiretech.com</h3>
+                        <h3><strong>Email:</strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;sales@greenfiretech.com</h3>
                     </div>
                     <div class="col-md-12 row">
                         <h3></i><strong>Address:</strong> 3rd Floor, Building 6, Wantou Industrial Zone, Hongxing
