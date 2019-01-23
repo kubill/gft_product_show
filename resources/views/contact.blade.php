@@ -13,14 +13,13 @@
                     </div>
                     <div class="col-md-12 row">
                         <h3><strong>Phone Number:</strong> +86-13510717855</h3>
-
-                        {{--<div class="col-md-4">--}}
-                        {{--<h3><i class="fa fa-envelope-o"> sales@greenfiretech.com</i></h3>--}}
-                        {{--</div>--}}
                     </div>
                     <div class="col-md-12 row">
                         <h3><strong>Whatsapp:</strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;+86-13510717855
                         </h3>
+                    </div>
+                    <div class="col-md-12 row">
+                        <h3><strong>Email:</strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;;&nbsp;;&nbsp;sales@greenfiretech.com</h3>
                     </div>
                     <div class="col-md-12 row">
                         <h3></i><strong>Address:</strong> 3rd Floor, Building 6, Wantou Industrial Zone, Hongxing
