@@ -53,15 +53,9 @@
                         Zone, Hongxing Village, Songgang, Bao'an District, Shenzhen</p></div>
                 <div class="col-md-6 text-center">
                     <div class="row">
-                        <div class="col-md-12 text-left">
-                            <p><i class="fa fa-phone"> +86-13510717855</i></p>
-                        </div>
-                        <div class="col-md-12 text-left">
-                            <p><i class="fa fa-whatsapp"> +86-13510717855</i></p>
-                        </div>
-                        <div class="col-md-12 text-left">
-                            <p><i class="fa fa-envelope-o"> sales@greenfiretech.com</i></p>
-                        </div>
+                        <div class="row" style="font-size: 2rem;color: wheat;">
+                        “ORIGIN” is a supper cost-effective portable dry herb vaporizer with the battery 2200 mAh, the experience it brings will far exceed what you pay. With “ORIGIN“ , you would pursue the original flavor and enjoy the pleasure of nature.
+			            </div>
                     </div>
                 </div>
                 <div class="col-md-12 text-center">
