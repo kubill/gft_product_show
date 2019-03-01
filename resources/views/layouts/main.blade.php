@@ -1,12 +1,14 @@
 <!DOCTYPE html>
-<html lang="{{ app()->getLocale() }}">
+<html lang="en-US">
 <head>
-    <title>@yield('title') - {{ config('product_name') }}</title>
+    <title>Green Fire Tech | Best Vaporizers Official Site</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link href="https://cdn.bootcss.com/twitter-bootstrap/4.1.3/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="{{ asset('css/theme.css') }}">
     <link href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="{{ asset('css/product.css') }}">
+    <meta name="keywords" content="origin Vaporizer, Vaping products, dry herb vaporizer, E-Cigarettes, Vaporizers, best vape, vape">
+    <meta name="description" content=" Green Fire Tech offers good performance vaporizers devices, equipment., customize your vaping life with Green Fire Tech.">
     @yield('css')
 </head>
 

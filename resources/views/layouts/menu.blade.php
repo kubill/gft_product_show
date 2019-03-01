@@ -14,9 +14,7 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
 
             <!-- Navbar: Brand -->
-            <a class="navbar-brand d-none d-lg-flex" href="{{ route('index') }}">
-                {{ config('product_name') }}
-            </a>
+            <a class="navbar-brand d-none d-lg-flex logo" href="{{ route('index') }}"></a>
 
             <!-- Navbar navigation: Right -->
             <ul class="navbar-nav ml-auto">
