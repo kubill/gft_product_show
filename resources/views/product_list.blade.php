@@ -14,6 +14,9 @@
                     <div class="col-xl-12 col-lg-12 col-md-12">
                             <a href="{{ route('product',$product->id) }}"><img class="card-img" src="{{ asset('uploads/'.$product->image) }}"
                                              alt="{{ $product->name }}"></a>
+                        <div class="card-body">
+                            <p class="card-text">{{ $product->describe }}</p>
+                        </div>
                     </div>
                 @endforeach
 
