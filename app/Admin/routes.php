@@ -15,4 +15,5 @@ Route::group([
     $router->resource('setting/articles', 'ArticleController');
     $router->resource('setting/banners', 'BannerController');
     $router->resource('setting/products', 'ProductController');
+    $router->resource('setting/comments', 'CommentController');
 });

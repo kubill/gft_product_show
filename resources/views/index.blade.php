@@ -1,128 +1,149 @@
-@extends('layouts.main')
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+    <title>Green Fire Tech | Best Vaporizers Official Site</title>
+    <link href="https://cdn.bootcss.com/Swiper/4.4.5/css/swiper.min.css" rel="stylesheet">
+    <link href="https://cdn.bootcss.com/twitter-bootstrap/4.1.3/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="{{ asset('css/theme.css') }}">
+    <link href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="css/product.css">
+    <meta name="keywords" content="origin Vaporizer, Vaping products, dry herb vaporizer, E-Cigarettes, Vaporizers, best vape, vape">
+    <meta name="description" content=" Green Fire Tech offers good performance vaporizers devices, equipment., customize your vaping life with Green Fire Tech.">
+</head>
 
-@section('content')
+<body>
 
-    <div id="fh5co-home" class="js-fullheight" data-section="home">
+@include('layouts.menu')
 
-        <div class="flexslider">
+<!-- Swiper -->
+<div class="swiper-container">
+    <div class="swiper-wrapper">
+        @foreach ($banners as $banner)
+            <div class="swiper-slide">
+                <a target="_blank" class="swiper-item"
+                   style=" background-image:url({{ asset('uploads/'.$banner->path) }})"></a>
+            </div>
+        @endforeach
+    </div>
+    <!-- Add Pagination -->
+    <div class="swiper-pagination"></div>
+</div>
 
-            <div class="fh5co-overlay"></div>
-            <div class="fh5co-text">
-                <div class="container">
+<div class="container-index" style="">
+    <div class="container text-center" style="padding-bottom: 4rem;">
+        <div class="row" style="font-size: 2rem;color: wheat;">
+                        Origin vaporizer engineered by Green Fire Tech is a supper cost-effective portable dry herb vaporizer with the battery 2200 mAh, the experience it brings will far exceed what you pay. With “ORIGIN“ , you would pursue the original flavor and enjoy the pleasure of nature.
+			            </div>
+    </div>
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-3"></div>
+                <div class="col-md-3 text-center"><p><i class="fa fa-home"></i> 3rd Floor, Building 6, Wantou Industrial
+                        Zone, Hongxing Village, Songgang, Bao'an District, Shenzhen</p></div>
+                <div class="col-md-6 text-center">
                     <div class="row">
-                        <h1 class="to-animate">Foodee</h1>
-                        <h2 class="to-animate">Lovely Designed <span>by</span> <a href="#"
-                                                                                  target="_blank">freehtml5.co</a>
-                        </h2>
+                        <div class="col-md-12 text-left">
+                            <p><i class="fa fa-phone"> +86-13510717855</i></p>
+                        </div>
+                        <div class="col-md-12 text-left">
+                            <p><i class="fa fa-whatsapp"> +86-13510717855</i></p>
+                        </div>
+                        <div class="col-md-12 text-left">
+                            <p><i class="fa fa-envelope-o"> sales@greenfiretech.com</i></p>
+                        </div>
                     </div>
                 </div>
-            </div>
-            <ul class="slides">
-                @foreach ($banners as $banner)
-                    <li style="background-image: url({{ asset('uploads/'.$banner->path) }});" data-stellar-background-ratio="0.5"></li>
-                @endforeach
-            </ul>
-
-        </div>
-
-    </div>
-
-    <div class="js-sticky">
-        <div class="fh5co-main-nav">
-            <div class="container-fluid">
-                <div class="fh5co-menu-1">
-                    <a href="#" data-nav-section="home">主页</a>
-                    <a href="#" data-nav-section="about">产品</a>
-                </div>
-                <div class="fh5co-logo">
-                    <a href="index.html">foodee</a>
-                </div>
-                <div class="fh5co-menu-2">
-                    <a href="#" data-nav-section="features">新闻</a>
-                    <a href="#" data-nav-section="events">联系</a>
+                <div class="col-md-12 text-center">
+                    <p>© {{date('Y')}} <a href="/">{{ config('product_name') }}</a> All rights reserved. | <a href="http://www.miibeian.gov.cn/" target="_blank">粤ICP备19002091号-1</a></p>
                 </div>
             </div>
-
         </div>
-    </div>
-
-    <div id="fh5co-featured" data-section="features">
-        <div class="container">
-            <div class="row text-center fh5co-heading row-padded">
-                <div class="col-md-8 col-md-offset-2">
-                    <h2 class="heading to-animate">热卖产品</h2>
-                    {{--<p class="sub-heading to-animate">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>--}}
-                </div>
-            </div>
-            <div class="row">
-                <div class="fh5co-grid">
-                    @foreach ($products as $product)
-                        <div class="fh5co-v-half to-animate-2">
-                            <div class="fh5co-v-col-2 fh5co-bg-img"
-                                 style="background-image: url({{ asset('uploads/'.$product->image) }})"></div>
-                            <div class="fh5co-v-col-2 fh5co-text fh5co-special-1 arrow-left">
-                                <h2>{{ $product->name }}</h2>
-                                <span class="pricing">￥{{ $product->price }}</span>
-                                <p>{{ $product->describe }}</p>
-                            </div>
-                        </div>
-                    @endforeach
-                </div>
-            </div>
-
-        </div>
-    </div>
-
-    <div id="fh5co-sayings">
-        <div class="container">
-            <div class="row to-animate">
-
-                <div class="flexslider">
-                    <ul class="slides">
-
-                        <li>
-                            <blockquote>
-                                <p>"一个人的价值，在于他贡献了什么，而不在于他能得到什么。"</p>
-                                <p class="quote-author right">&mdash; 阿尔伯特·爱因斯坦</p>
-                            </blockquote>
-                        </li>
-                        <li>
-                            <blockquote>
-                                <p>"许多年以后，人类的机器可以在宇宙中任何一点获取能量从而驱动机器。"</p>
-                                <p class="quote-author">&mdash; 尼古拉·特斯拉</p>
-                            </blockquote>
-                        </li>
-                        <li>
-                            <blockquote>
-                                <p>"在我们了解科学之前，相信上帝创造宇宙是很理所当然的。但是现在科学已经提供了更让人信服的解释。"</p>
-                                <p class="quote-author">&mdash; 史蒂芬·霍金</p>
-                            </blockquote>
-                        </li>
-                        <li>
-                            <blockquote>
-                                <p>&ldquo;Never work before breakfast; if you have to work before breakfast, eat your
-                                    breakfast first.&rdquo;</p>
-                                <p class="quote-author">&mdash; Josh Billings</p>
-                            </blockquote>
-                        </li>
+    </footer>
+</div>
 
 
-                    </ul>
-                </div>
+<script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.slim.min.js"></script>
+<script src="https://cdn.bootcss.com/twitter-bootstrap/4.1.3/js/bootstrap.min.js"></script>
+<script src="https://cdn.bootcss.com/Swiper/4.4.5/js/swiper.min.js"></script>
+<script src="https://cdn.bootcss.com/waypoints/4.0.1/jquery.waypoints.min.js"></script>
+<script src="js/main.js"></script>
 
-            </div>
-        </div>
-    </div>
 
-    <div id="fh5co-about" data-section="about">
-        <div class="fh5co-2col fh5co-bg to-animate-2" style="background-image: url(images/res_img_1.jpg)"></div>
-        <div class="fh5co-2col fh5co-text">
-            <h2 class="heading to-animate">关于我们</h2>
-            <p class="to-animate"><span class="firstcharacter">&nbsp;</span>华为是全球领先的ICT（信息与通信）基础设施和智能终端提供商，致力于把数字世界带入每个人、每个家庭、每个组织，构建万物互联的智能世界。我们在通信网络、IT、智能终端和云服务等领域为客户提供有竞争力、安全可信赖的产品、解决方案与服务，与生态伙伴开放合作，持续为客户创造价值，释放个人潜能，丰富家庭生活，激发组织创新。华为坚持围绕客户需求持续创新，加大基础研究投入，厚积薄发，推动世界进步。
-            </p>
-            <p class="text-center to-animate"><a href="#" data-nav-section="about" class="btn btn-primary btn-outline">Get
-                    in touch</a></p>
-        </div>
-    </div>
+<script>
+    $(document).ready(function () {
+        $("div.content").css('margin-top', window.innerHeight);
+        $("div.footer").css('min-height', window.innerHeight + 'px');
 
-@endsection
+        $(window).resize(function () {
+            $("div.content").css('margin-top', window.innerHeight);
+            $("div.footer").css('min-height', window.innerHeight + 'px');
+        });
+
+        $(window).scroll(function () {
+            console.log($(window).scrollTop());
+            if ($(window).scrollTop() == 0) {
+                swiper.mousewheel.enable(); //启用鼠标滑轮控制
+            } else {
+                swiper.mousewheel.disable(); //禁止鼠标滑轮控制
+            }
+        });
+
+        $('#fh5co-featured').show();
+        $('#fh5co-footer').show();
+    });
+
+    var swiper = new Swiper('.swiper-container', {
+        direction: 'vertical',
+        speed: 500,
+        slidesPerView: 1,
+        mousewheel: {
+            releaseOnEdges: true
+        },
+        pagination: {
+            el: '.swiper-pagination',
+            clickable: true,
+        },
+        on: {
+            reachEnd: function () {
+                setTimeout(function () {
+                    enableMouseWheel();
+                }, 300);
+            },
+            slidePrevTransitionEnd: function(){
+                if(this.activeIndex < {{ $bannerAmount-1 }}){
+                    disabledMouseWheel();
+                }
+            },
+        },
+    });
+
+    function disabledMouseWheel() {
+        if (document.addEventListener) {
+            document.addEventListener('DOMMouseScroll', scrollFunc, false);
+        }//W3C
+        window.onmousewheel = document.onmousewheel = scrollFunc;//IE/Opera/Chrome
+    }
+
+    function enableMouseWheel() {
+        if (document.addEventListener) {
+            document.addEventListener('DOMMouseScroll', scrollFunc1, true);
+
+        }
+        window.onmousewheel = document.onmousewheel = scrollFunc1;//IE/Opera/Chrome
+    }
+
+    function scrollFunc(evt) {
+        return false;
+    }
+
+    function scrollFunc1(evt) {
+        return true;
+    }
+
+    window.onload = disabledMouseWheel;
+
+</script>
+
+</body>
+</html>

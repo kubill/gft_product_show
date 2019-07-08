@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Banner;
+use App\Models\Comment;
 use App\Models\Product;
 use App\Models\Article;
 use Illuminate\Http\Request;
@@ -21,10 +22,10 @@ class IndexController extends Controller
      */
     public function index()
     {
-        $banners = Banner::where('display', 1)->take(3)->get();//轮播图
-        $products = Product::where('hot',1)->take(2)->get();//Product::get();//8个产品
-        $article = 1;//Article::get();//2个文章
-        return view('index', compact('banners', 'products'));
+        $banners = Banner::where('display', 1)->orderBy('sort', 'ASC')->get();//轮播图
+        $bannerAmount = count($banners);
+        $products = Product::where('hot', 1)->take(2)->get();//Product::get();//8个产品
+        return view('index', compact('banners', 'products', 'bannerAmount'));
     }
 
     /**
@@ -35,7 +36,8 @@ class IndexController extends Controller
      */
     public function productList(Product $product)
     {
-        return view('product_list');
+        $products = Product::get();
+        return view('product_list', compact('products'));
     }
 
     /**
@@ -46,7 +48,8 @@ class IndexController extends Controller
      */
     public function productDetail($id)
     {
-        return view();
+        $product = Product::find($id);
+        return view('product', compact('product'));
     }
 
     /**
@@ -88,6 +91,16 @@ class IndexController extends Controller
      */
     public function contact()
     {
-        return view('contact');
+        $product = Product::query()->find(1);
+        $result = false;
+        return view('contact', compact('product', 'result'));
+    }
+
+    public function contackPost(Request $request)
+    {
+        $data = $request->all();
+        Comment::query()->create($data);
+        $result = true;
+        return view('contact', compact('result'));
     }
 }

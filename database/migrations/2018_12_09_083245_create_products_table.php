@@ -17,6 +17,7 @@ class CreateProductsTable extends Migration
             $table->increments('id')->autoIncrement();
             $table->string('name')->comment('产品名称');
             $table->string('image')->comment('产品图片');
+            $table->json('pictures')->comment('产品详情图片');
             $table->decimal('price')->commnet('产品价格');
             $table->string('describe')->comment('产品描述');
             $table->boolean('hot')->comment('热门产品');

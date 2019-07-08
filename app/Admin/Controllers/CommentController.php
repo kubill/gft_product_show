@@ -2,7 +2,7 @@
 
 namespace App\Admin\Controllers;
 
-use App\Models\Product;
+use App\Models\Comment;
 use App\Http\Controllers\Controller;
 use Encore\Admin\Controllers\HasResourceActions;
 use Encore\Admin\Form;
@@ -10,7 +10,7 @@ use Encore\Admin\Grid;
 use Encore\Admin\Layout\Content;
 use Encore\Admin\Show;
 
-class ProductController extends Controller
+class CommentController extends Controller
 {
     use HasResourceActions;
 
@@ -23,7 +23,7 @@ class ProductController extends Controller
     public function index(Content $content)
     {
         return $content
-            ->header('产品管理')
+            ->header('留言管理')
             ->description('列表')
             ->body($this->grid());
     }
@@ -38,8 +38,8 @@ class ProductController extends Controller
     public function show($id, Content $content)
     {
         return $content
-            ->header('产品管理')
-            ->description('详细')
+            ->header('留言管理')
+            ->description('详情')
             ->body($this->detail($id));
     }
 
@@ -53,8 +53,8 @@ class ProductController extends Controller
     public function edit($id, Content $content)
     {
         return $content
-            ->header('产品管理')
-            ->description('编辑')
+            ->header('Edit')
+            ->description('description')
             ->body($this->form()->edit($id));
     }
 
@@ -67,8 +67,8 @@ class ProductController extends Controller
     public function create(Content $content)
     {
         return $content
-            ->header('产品管理')
-            ->description('创建')
+            ->header('Create')
+            ->description('description')
             ->body($this->form());
     }
 
@@ -79,19 +79,19 @@ class ProductController extends Controller
      */
     protected function grid()
     {
-        $grid = new Grid(new Product);
+        $grid = new Grid(new Comment);
 
-        $grid->id('ID');
-        $grid->name('名称');
-        $grid->image('图片')->lightbox(['zooming' => true]);
-        $grid->price('价格');
-        $grid->describe('描述');
-        $grid->hot('热门产品')->display(function ($value) {
-            return $value ? '是' : '否';
+        $grid->id('Id');
+        $grid->name('姓名');
+        $grid->email('Email');
+        $grid->telephone('电话号码');
+        $grid->comment('内容');
+        $grid->created_at('留言时间');
+
+        $grid->disableCreateButton();
+        $grid->actions(function (Grid\Displayers\Actions $actions){
+            $actions->disableEdit();
         });
-        $grid->created_at('添加时间');
-        $grid->updated_at('更新时间');
-
         return $grid;
     }
 
@@ -103,20 +103,19 @@ class ProductController extends Controller
      */
     protected function detail($id)
     {
-        $show = new Show(Product::findOrFail($id));
+        $show = new Show(Comment::findOrFail($id));
 
-        $show->id('ID');
-        $show->name('名称');
-        $show->image('图片')->image();
-        $show->pictures('图片')->images();
-        $show->price('价格');
-        $show->describe('描述');
-        $show->hot('热门产品')->as(function ($value) {
-            return $value ? '是' : '否';
-        });;
-        $show->created_at('添加时间');
-        $show->updated_at('更新时间');
+        $show->id('Id');
+        $show->name('姓名');
+        $show->email('Email');
+        $show->telephone('电话号码');
+        $show->comment('内容');
+        $show->created_at('留言时间');
 
+        $show->panel()
+            ->tools(function (Show\Tools $tools) {
+                $tools->disableEdit();
+            });;
         return $show;
     }
 
@@ -127,14 +126,13 @@ class ProductController extends Controller
      */
     protected function form()
     {
-        $form = new Form(new Product);
+        $form = new Form(new Comment);
 
-        $form->text('name', '名称');
-        $form->image('image', '封面图片');
-        $form->multipleImage('pictures', '详细图片')->removable();;
-        $form->currency('price', '价格')->symbol('￥');
-        $form->text('describe', '描述');
-        $form->switch('hot', '热门产品');
+        $form->text('name', 'Name');
+        $form->email('email', 'Email');
+        $form->text('telephone', 'Telephone');
+        $form->textarea('comment', 'Comment');
+        $form->number('child_id', 'Child id');
 
         return $form;
     }
